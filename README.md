@@ -12,6 +12,16 @@ It's also still powerful to show a pattern being learnt with data alone.
 
 ## Update
 
-I demo'd this to my AI study group - more as a pytorch demo - it kicked off a conversation about whether a simple DNN could ever perform this task perfectly. Was there enough sophistication in feed forward neural network (with non linear activations) to learn, effectively division. There was a view that adding a loop to the network would enable it to better learn the function. To test I added an LSTM layer to provide this 'memory' / loop and at the same time make the experiment more robust with an unseen test set.
-Whilst not perfect results there were substanial improvements. 
+I demo'd this to my AI study group - more as a pytorch demo - it kicked off a conversation about whether a simple DNN could ever perform this task perfectly. 
+Was there enough sophistication in feed forward neural network (with non linear activations) to learn this task?
+Would adding an RNN layer make the netowrk [Turing Complete](https://en.wikipedia.org/wiki/Turing_completeness) or does the [Universal Approximation Theorem (UAT)](https://en.wikipedia.org/wiki/Universal_approximation_theorem) mean that a non-recurrent network should be able to learn the task.
+
+UAT is well discussed [here](http://neuralnetworksanddeeplearning.com/chap4.html) and two important caveats are given; approximation and a continuous function - both of which would come into play with this example.
+
+And the difference between the two is discussed [here](https://cs.stackexchange.com/questions/68820/confused-between-turing-completeness-and-universal-approximation-are-they-rela).
+
+To test I added an LSTM layer to provide this memory / loop and improvements are definitely seen - more accurate results showing a greater approximation of Fizzbuzz are seen, getting up to only 1 wrong answer in the entire population vs 7 in the original model.
+
+(Additionally the experiment was made considerably more robust by using an unseen test set after an oversight on my behalf!)
+
 
