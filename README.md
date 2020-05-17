@@ -10,4 +10,8 @@ The classic [Fizzbuzz](https://en.wikipedia.org/wiki/Fizz_buzz) problem can be s
 
 It's also still powerful to show a pattern being learnt with data alone. 
 
+## Update
+
+I demo'd this to my AI study group - more as a pytorch demo - it kicked off a conversation about whether a simple DNN could ever perform this task perfectly. Was there enough sophistication in feed forward neural network (with non linear activations) to learn, effectively division. There was a view that adding a loop to the network would enable it to better learn the function. To test I added an LSTM layer to provide this 'memory' / loop and at the same time make the experiment more robust with an unseen test set.
+Whilst not perfect results there were substanial improvements. 
 
